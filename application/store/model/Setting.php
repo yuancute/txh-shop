@@ -3,7 +3,7 @@
 namespace app\store\model;
 
 use app\common\model\Setting as SettingModel;
-use think\Cache;
+use Cache;
 
 /**
  * 系统设置模型

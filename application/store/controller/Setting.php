@@ -59,7 +59,7 @@ class Setting extends Controller
             return $this->fetch($key,compact('values'));
         };
         $model = new SettingModel;
-        if($model->edit($key,$this->postData()))
+        if($model->edit($key,$this->postData($key)))
         {
             return $this->renderSuccess('更新成功');
         }

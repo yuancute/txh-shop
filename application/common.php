@@ -27,7 +27,8 @@ function txh_hash($password)
  */
 function base_url(){
     $request = Request::instance();
-    $subDir = str_replace('\\', '/', dirname($request->server('PHP_SELF')));
+    /*$subDir = str_replace('\\', '/', dirname($request->server('PHP_SELF')));*/
+    $subDir = '/';
     return $request->scheme() . '://' . $request->host() . $subDir . ($subDir === '/' ? '' : '/');
 
 }
