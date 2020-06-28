@@ -14,7 +14,7 @@ class Login extends Controller
             if ($model->login($this->request->post('User'))) {
                 return $this->renderSuccess('登录成功', url('home/index'));
             }
-            return $this->renderError($model->getError() ?: '登录失败');
+            return $this->renderError($model->getError() ?: '登录失败','login');
         }
         $this->view->engine->layout(false);
         return $this->fetch('login');
