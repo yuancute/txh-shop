@@ -22,7 +22,7 @@ class Login extends Controller
     //退出登录
     public function logout()
     {
-        Session::clear('txh_store');
+        Session::delete('txh_store');
         $this->redirect('login/login');
     }
 }
